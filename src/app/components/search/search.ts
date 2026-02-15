@@ -14,7 +14,7 @@ import { Article } from '../../models/articles.types';
       <input class="search" type="search" [ngModel]="query()" (ngModelChange)="query.set($event)" placeholder="Search" autocomplete="off"/>
       <div class="meta">
         @if (query().trim().length > 0) {
-          {{ results().length }} results{{ results().length === 1 ? '' : 's' }}
+          {{ results().length }} result{{ results().length === 1 ? '' : 's' }} found
           for "{{ query().trim() }}"
         } @else {
           Showing all articles (type to search)
