@@ -25,6 +25,9 @@ h2 {
 .meta {
     margin-top: 0.75rem;
     color: #777;
+    span {
+        font-weight: 800;
+    }
 }
 
 .empty {
@@ -55,11 +58,12 @@ h2 {
 
 .title {
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 0.3rem;
 }
 
 .excerpt {
+    font-size: 1.2rem;
     color: #555;
     margin-bottom: 0.6rem;
 }
