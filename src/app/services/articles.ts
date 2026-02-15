@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Article } from '../models/articles.types';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Articles {
-  private articles: Article[] = [
+  articles = signal<Article[]>([
     {
       id: 1,
       title: 'Angular Standalone Components',
@@ -34,5 +34,5 @@ export class Articles {
       content: 'Use trackBy in ngFor, keep filtering efficient, and avoid heavy computations in templates. For larger datasets, consider virtual scrolling.',
       tags: ['performance', 'frontend']
     }
-  ];
+  ]);
 }
