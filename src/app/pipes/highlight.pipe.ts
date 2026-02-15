@@ -11,7 +11,7 @@ function escapeRegExp(text: string) {
     standalone: true,
 })
 export class HighlightPipe implements PipeTransform {
-    private sanitizer = inject(DomSanitizer);
+    private readonly sanitizer = inject(DomSanitizer);
 
     transform(text: string, query: string): SafeHtml {
         if (!text) return '';
