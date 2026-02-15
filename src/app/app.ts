@@ -1,16 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Search } from './components/search/search';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{ title() }}!</h1>
-
-    <router-outlet />
-  `,
+  imports: [Search],
+  template: `<app-search />`,
   styles: [],
 })
-export class App {
-  protected readonly title = signal('text-search');
-}
+export class App {}
